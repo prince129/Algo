@@ -1,0 +1,20 @@
+# Algo
+Practice
+// valley Count
+
+    static int countingValleys(int n, String s) {
+        int sealevel = 0;
+        int numValley= 0;
+        for (char step : s.toCharArray()){
+            if(sealevel == -1 && step == 'U'){
+                numValley++;
+            }
+            if(step == 'U'){
+                sealevel = sealevel + 1;
+            } else {
+                sealevel = sealevel - 1;
+            }
+        }
+        return numValley;
+
+    }
